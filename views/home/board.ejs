@@ -7,6 +7,38 @@
 
 <body>
   <%- include('../partials/nav') %>
-  <button type="button" class="btn btn-outline-info">Test</button>
+  <div class="container">
+    <br><h1><a href="#">게시판</a></h1><br>
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>제목</th>
+          <th>글쓴이</th>
+          <th>조회수</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% contents.forEach(function(contents) { %>
+        <tr>
+          <td><%= contents.board_id %></td>
+          <td><%= contents.title %></td>
+          <td><%= contents.author %></td>
+          <td><%= contents.views %></td>
+        </tr>
+        <%})%>
+      </tbody>
+    </table>
+    <ul class="pagination justify-content-center">
+      <li><a class="page-link" href="#" class="page-item text-secondary">◀</a></li>
+      <li><a class="page-link" href="#" class="page-item text-secondary">1</a></li>
+      <li><a class="page-link" href="#" class="page-item text-secondary">2</a></li>
+      <li><a class="page-link" href="#" class="page-item text-secondary">3</a></li>
+      <li><a class="page-link" href="#" class="page-item text-secondary">4</a></li>
+      <li><a class="page-link" href="#" class="page-item text-secondary">5</a></li>
+      <li><a class="page-link" href="#" class="page-item text-secondary">▶</a></li>
+    </ul>
+      <button class="btn btn-info" style="float:right;" onclick="location.href='/write';">글쓰기</button>
+  </div>
 
 </body>
