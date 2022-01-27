@@ -21,22 +21,22 @@
       <tbody>
         <% contents.forEach(function(contents) { %>
         <tr>
-          <td><%= contents.board_id %></td>
-          <td><%= contents.title %></td>
-          <td><%= contents.author %></td>
+          <td><%= contents.id %></td>
+          <td><a class="nav-link text-dark" href="/<%=contents.id%>"><%= contents.title %></a></td>
+          <td><%= contents.writer %></td>
           <td><%= contents.views %></td>
         </tr>
         <%})%>
       </tbody>
     </table>
     <ul class="pagination justify-content-center">
-      <li><a class="page-link" href="#" class="page-item text-secondary">◀</a></li>
-      <li><a class="page-link" href="#" class="page-item text-secondary">1</a></li>
-      <li><a class="page-link" href="#" class="page-item text-secondary">2</a></li>
-      <li><a class="page-link" href="#" class="page-item text-secondary">3</a></li>
-      <li><a class="page-link" href="#" class="page-item text-secondary">4</a></li>
-      <li><a class="page-link" href="#" class="page-item text-secondary">5</a></li>
-      <li><a class="page-link" href="#" class="page-item text-secondary">▶</a></li>
+      <li class="page-item"><a href="#" class="page-link text-secondary">◀</a></li>
+      <li class="page-item"><a href="#" class="page-link text-secondary">1</a></li>
+      <li class="page-item"><a href="#" class="page-link text-secondary">2</a></li>
+      <li class="page-item"><a href="#" class="page-link text-secondary">3</a></li>
+      <li class="page-item"><a href="#" class="page-link text-secondary">4</a></li>
+      <li class="page-item"><a href="#" class="page-link text-secondary">5</a></li>
+      <li class="page-item"><a href="#" class="page-link text-secondary">▶</a></li>
     </ul>
       <button class="btn btn-info" style="float:right;" onclick="location.href='/write';">글쓰기</button>
   </div>

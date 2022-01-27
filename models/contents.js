@@ -4,8 +4,8 @@ var mongoose = require('mongoose');
 var contentSchema = mongoose.Schema({
   id:{type:Number},
   title:{type:String},
-  content:{type:String},
-  author:{type:String},
+  body:{type:String},
+  writer:{type:String},
   views:{type:Number}
 });
 
