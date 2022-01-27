@@ -3,7 +3,6 @@
 var mongoose = require('mongoose');
 var contentSchema = mongoose.Schema({
   id:{type:Number},
-  board_id:{type:String},
   title:{type:String},
   content:{type:String},
   author:{type:String},

@@ -8,15 +8,17 @@
 <body>
   <%- include('../partials/nav') %>
   <div class="container">
-    <h2>글쓰기</h2>
+    <br><h2 class="text-secondary">글쓰기</h2>
     <form action="/home" method="post">
       <label for="title">제목</label>
-      <input class="form-control" type="text" id="title" name="title" placeholder="제목을 입력해주세요">
+      <div class="col-10"><input class="form-control" type="text" id="title" name="title" placeholder="제목을 입력해주세요">
       <br>
-      <textarea class="form-control" id="content" name="content" placeholder="내용을 입력해주세요"> </textarea>
+      <textarea class="form-control" id="content" name="content" placeholder="내용을 입력해주세요" rows=20></textarea>
       <br>
       <button class="btn btn-danger" style="float:right;" onclick="location.href='/home';">취소</button>
-      <button type="submit" class="btn btn-primary" style="float:right;">저장</button>
+      <button type="submit" class="btn btn-primary" style="float:right;">저장</button></div>
+      <br>
+
 
     </form>
   </div>
